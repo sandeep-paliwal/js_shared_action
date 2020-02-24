@@ -1,6 +1,7 @@
 const core = require('@actions/core')
 const github = require('@actions/github')
 const execSync = require('child_process').execSync
+const util = require('util')
 
 try {
   // `who-to-greet` input defined in action metadata file
@@ -18,17 +19,16 @@ try {
   // const payload = JSON.stringify(github.context.payload, undefined, 2)
   // console.log(`The event payload: ${payload}`);
   let env = {
-    AIO_RUNTIME_NAMESPACE: namespace,
-    AIO_RUNTIME_AUTH: auth
+    AIO_RUNTIME_NAMESPACE: namespace
   }
   let options = {
       stdio: 'inherit',
       env: env
   }
-
-   child = execSync('sudo npm install -g @adobe/aio-cli', options)
-   child = execSync('sudo aio -v', options)
-   child = execSync('sudo aio app deploy', options)
+console.log("options " + util.inspect(options))
+   // child = execSync('sudo npm install -g @adobe/aio-cli', options)
+   // child = execSync('sudo aio -v', options)
+   // child = execSync('sudo aio app deploy', options)
 
 } catch (error) {
   core.setFailed(error.message);
