@@ -504,8 +504,8 @@ try {
   var options = {
       stdio: 'inherit' //feed all child process logging into parent process
   }
-   child = execSync('npm install -g @adobe/aio-cli', options)
-   child = execSync('aio -v', options)
+   child = execSync('sudo npm install -g @adobe/aio-cli', options)
+   child = execSync('sudo aio -v', options)
 
 } catch (error) {
   core.setFailed(error.message);
