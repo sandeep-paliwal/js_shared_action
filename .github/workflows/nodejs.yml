@@ -11,6 +11,12 @@ jobs:
       - name: Hello world action step
         uses: ./dist
         id: hello
+        env:
+          CI: true
+          AIO_RUNTIME_AUTH: ${{ secrets.AIO_RUNTIME_AUTH }}
+          AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
+          AIO_RUNTIME_APIHOST: 'https://adobeioruntime.net'
+          AIO_CNA_TVMURL: https://adobeio.adobeioruntime.net/apis/tvm/
         with:
           who-to-greet: 'Mona the Octocat'
       # Use the output from the `hello` step
