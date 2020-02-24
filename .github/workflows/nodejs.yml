@@ -14,4 +14,4 @@ jobs:
         with:
           who-to-greet: 'Mona the Octocat'
           AIO_RUNTIME_AUTH: ${{ secrets.AIO_RUNTIME_AUTH }}
-          AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
+          AIO_RUNTIME_NAMESPACE: 23294_47690
