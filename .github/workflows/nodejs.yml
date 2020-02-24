@@ -3,12 +3,12 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: App Deploy
     steps:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Hello world action step
+      - name: Deploy
         id: hello
         env:
           CI: true
@@ -16,12 +16,11 @@ jobs:
           AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
           AIO_RUNTIME_APIHOST: 'https://adobeioruntime.net'
           AIO_CNA_TVMURL: https://adobeio.adobeioruntime.net/apis/tvm/
-        run: |
-          echo User namespace $AIO_RUNTIME_NAMESPACE !!!
         uses: ./dist
         with:
           who-to-greet: 'Mona the Octocat'
       # Use the output from the `hello` step
       - name: Get the output time
         run: |
+          echo User namespace $AIO_RUNTIME_NAMESPACE !!!
           echo "The time was ${{ steps.hello.outputs.time }}"
