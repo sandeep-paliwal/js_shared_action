@@ -7,21 +7,25 @@ try {
   const nameToGreet = core.getInput('who-to-greet');
   console.log(`Hello ${nameToGreet}!`);
   const namespace = core.getInput('AIO_RUNTIME_NAMESPACE');
-  console.log(`Namespace ${nameToGreet}!`);
-  process.env.AIO_RUNTIME_NAMESPACE = namespace
+  console.log(`Namespace ${namespace}!`);
   const auth = core.getInput('AIO_RUNTIME_AUTH');
   if(auth) {
     console.log(`auth present`);
-    process.env.AIO_RUNTIME_AUTH = auth
   }
   // const time = (new Date()).toTimeString();
   // core.setOutput("time", time);
   // // Get the JSON webhook payload for the event that triggered the workflow
   // const payload = JSON.stringify(github.context.payload, undefined, 2)
   // console.log(`The event payload: ${payload}`);
-  var options = {
-      stdio: 'inherit' //feed all child process logging into parent process
+  let env = {
+    AIO_RUNTIME_NAMESPACE: namespace,
+    AIO_RUNTIME_AUTH: auth
   }
+  let options = {
+      stdio: 'inherit',
+      env: env
+  }
+
    child = execSync('sudo npm install -g @adobe/aio-cli', options)
    child = execSync('sudo aio -v', options)
    child = execSync('sudo aio app deploy', options)
