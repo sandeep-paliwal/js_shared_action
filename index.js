@@ -31,7 +31,7 @@ console.log("options " + util.inspect(options))
 // child = execSync('node test.js', options)
    child = execSync('sudo npm install -g @adobe/aio-cli', options)
    child = execSync('sudo aio -v', options)
-   child = execSync('sudo aio app deploy', options)
+   child = execSync('sudo --preserve-env aio app deploy', options)
 
 } catch (error) {
   core.setFailed(error.message);
