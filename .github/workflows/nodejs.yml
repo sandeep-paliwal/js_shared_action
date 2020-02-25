@@ -1,18 +1,13 @@
-on: [push]
+name: AIO App CI
 
+on: [push]
 jobs:
-  hello_world_job:
+  build:
     runs-on: ubuntu-latest
-    name: App Deploy
     steps:
-      # To use this repository's private action, you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Deploy
-        id: hello
+      - name: Setup CLI
         uses: ./dist/setup-cli
+      - name: Build
         uses: ./dist/build-app
-        with:
-          who-to-greet: 'Mona the Octocat'
-          AIO_RUNTIME_AUTH: ${{ secrets.AIO_RUNTIME_AUTH }}
-          AIO_RUNTIME_NAMESPACE: 23294_47690
