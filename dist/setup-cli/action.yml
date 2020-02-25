@@ -2,4 +2,4 @@ name: 'Setup AIO CLI'
 description: 'Install AIO CLI'
 runs:
   using: 'node12'
-  main: 'dist/setup-cli/index.js'
+  main: 'index.js'

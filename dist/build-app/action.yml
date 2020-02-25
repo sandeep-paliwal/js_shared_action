@@ -2,4 +2,4 @@ name: 'Build App'
 description: 'Builds app using AIO CLI'
 runs:
   using: 'node12'
-  main: 'dist/build-app/index.js'
+  main: 'index.js'
