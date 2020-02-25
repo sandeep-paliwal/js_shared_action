@@ -10,7 +10,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Deploy
         id: hello
-        uses: ./dist
+        uses: ./dist/setup-cli
+        uses: ./dist/build-app
         with:
           who-to-greet: 'Mona the Octocat'
           AIO_RUNTIME_AUTH: ${{ secrets.AIO_RUNTIME_AUTH }}

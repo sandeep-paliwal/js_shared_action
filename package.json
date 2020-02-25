@@ -6,7 +6,7 @@
   },
   "scripts": {
     "test": "jest --ci -w=2",
-    "package": "ncc build index.js -o dist"
+    "package": "ncc build aio_cli_actions/setup-cli/setup.js -o dist/setup-cli/;ncc build aio_cli_actions/build-app/build.js -o dist/build-app/"
   },
   "dependencies": {
     "@actions/core": "^1.2.2",
