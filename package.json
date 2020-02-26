@@ -1,6 +1,6 @@
 {
   "name": "js_shared_actions_demo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "devDependencies": {
     "@zeit/ncc": "^0.20.5"
   },

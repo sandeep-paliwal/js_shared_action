@@ -11,3 +11,5 @@ jobs:
         uses: ./dist/setup-cli
       - name: Build
         uses: ./dist/build-app
+        run: |
+        aio app deploy
