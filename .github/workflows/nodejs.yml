@@ -12,9 +12,13 @@ jobs:
       - name: Build
         uses: ./dist/build-app
       - name: Deploy
-        env:
-          CI: true
+        uses: ./dist/deploy-app
+        with:
           AIO_RUNTIME_AUTH: ${{ secrets.AIO_RUNTIME_AUTH }}
           AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
-        run: |
-          aio app deploy --skip-build
+        # env:
+        #   CI: true
+        #   AIO_RUNTIME_AUTH: ${{ secrets.AIO_RUNTIME_AUTH }}
+        #   AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
+        # run: |
+        #   aio app deploy --skip-build
