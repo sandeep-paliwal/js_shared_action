@@ -8,7 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup CLI
-        uses: sandeep-paliwal/aio-cli-setup@0.0.1
+        uses: sandeep-paliwal/aio-cli-setup
 #       - name: Build
 #         uses: ./dist/build-app
 #       - name: Deploy
