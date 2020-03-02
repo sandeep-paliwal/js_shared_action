@@ -20,7 +20,7 @@ jobs:
       - name: Deploy
         uses: sandeep-paliwal/aio-app@0.0.1
         with:
-          command: build
+          command: deploy
           AIO_RUNTIME_AUTH: ${{ secrets.AIO_RUNTIME_AUTH }}
           AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
 
