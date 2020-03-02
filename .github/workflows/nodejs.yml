@@ -15,7 +15,7 @@ jobs:
           command: build
           AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
       - name: Test
-        uses: sandeep-paliwal/aio-app@0.0.3
+        uses: sandeep-paliwal/aio-app@0.0.4
         with:
           command: test
 #       - name: Deploy
