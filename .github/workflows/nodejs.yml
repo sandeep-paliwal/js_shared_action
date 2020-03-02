@@ -10,10 +10,14 @@ jobs:
       - name: Setup CLI
         uses: sandeep-paliwal/aio-cli-setup@0.0.2
       - name: Build
-        uses: sandeep-paliwal/aio-build-app@0.0.1
-      - name: Deploy
-        uses: sandeep-paliwal/aio-deploy-app@0.0.5
+        uses: sandeep-paliwal/aio-app@0.0.1
         with:
-          AIO_RUNTIME_AUTH: ${{ secrets.AIO_RUNTIME_AUTH }}
-          AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
+          command: build
+#       - name: Build
+#         uses: sandeep-paliwal/aio-build-app@0.0.1
+#       - name: Deploy
+#         uses: sandeep-paliwal/aio-deploy-app@0.0.5
+#         with:
+#           AIO_RUNTIME_AUTH: ${{ secrets.AIO_RUNTIME_AUTH }}
+#           AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
 
