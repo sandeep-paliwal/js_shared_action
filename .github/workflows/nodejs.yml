@@ -13,15 +13,14 @@ jobs:
         uses: sandeep-paliwal/aio-app@0.0.1
         with:
           command: build
-      - name: Test
+#       - name: Test
+#         uses: sandeep-paliwal/aio-app@0.0.1
+#         with:
+#           command: test
+      - name: Deploy
         uses: sandeep-paliwal/aio-app@0.0.1
         with:
-          command: test
-#       - name: Build
-#         uses: sandeep-paliwal/aio-build-app@0.0.1
-#       - name: Deploy
-#         uses: sandeep-paliwal/aio-deploy-app@0.0.5
-#         with:
-#           AIO_RUNTIME_AUTH: ${{ secrets.AIO_RUNTIME_AUTH }}
-#           AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
+          command: build
+          AIO_RUNTIME_AUTH: ${{ secrets.AIO_RUNTIME_AUTH }}
+          AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
 
