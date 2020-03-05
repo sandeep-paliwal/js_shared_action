@@ -17,7 +17,7 @@ jobs:
         with:
           os: ${{ matrix.os }}
       - name: Build
-        uses: sandeep-paliwal/aio-app@0.0.5
+        uses: sandeep-paliwal/aio-app@0.0.6
         with:
           os: ${{ matrix.os }}
           command: build
@@ -27,7 +27,7 @@ jobs:
 #         with:
 #           command: test
       - name: Deploy
-        uses: sandeep-paliwal/aio-app@0.0.5
+        uses: sandeep-paliwal/aio-app@0.0.6
         with:
           os: ${{ matrix.os }}
           command: deploy
