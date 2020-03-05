@@ -13,24 +13,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup CLI
-        uses: sandeep-paliwal/aio-cli-setup@0.0.6
+        uses: adobe/aio-cli-setup-action@0.0.1
         with:
           os: ${{ matrix.os }}
-      - name: Build
-        uses: sandeep-paliwal/aio-app@0.0.6
-        with:
-          os: ${{ matrix.os }}
-          command: build
-          AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
+#       - name: Build
+#         uses: sandeep-paliwal/aio-app@0.0.6
+#         with:
+#           os: ${{ matrix.os }}
+#           command: build
+#           AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
 #       - name: Test
 #         uses: sandeep-paliwal/aio-app@0.0.4
 #         with:
 #           command: test
-      - name: Deploy
-        uses: sandeep-paliwal/aio-app@0.0.6
-        with:
-          os: ${{ matrix.os }}
-          command: deploy
-          AIO_RUNTIME_AUTH: ${{ secrets.AIO_RUNTIME_AUTH }}
-          AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
+#       - name: Deploy
+#         uses: sandeep-paliwal/aio-app@0.0.6
+#         with:
+#           os: ${{ matrix.os }}
+#           command: deploy
+#           AIO_RUNTIME_AUTH: ${{ secrets.AIO_RUNTIME_AUTH }}
+#           AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
 
