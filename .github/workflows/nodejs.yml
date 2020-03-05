@@ -8,14 +8,14 @@ jobs:
       max-parallel: 1
       matrix:
         node-version: ['12']
-        os: [macOS-latest, ubuntu-latest, windows-latest]
+        os: [macOS-latest, ubuntu-latest, windows-latest, ]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup CLI
-        uses: sandeep-paliwal/aio-cli-setup@0.0.5
+        uses: sandeep-paliwal/aio-cli-setup@0.0.6
         with:
-          node-version: ${{ matrix.os }}
+          os: ${{ matrix.os }}
 #       - name: Build
 #         uses: sandeep-paliwal/aio-app@0.0.3
 #         with:
