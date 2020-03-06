@@ -28,11 +28,11 @@ jobs:
 #         uses: adobe/aio-apps-action@0.0.1
 #         with:
 #           command: test
-      - name: Deploy
-        uses: adobe/aio-apps-action@0.0.1
-        with:
-          os: ${{ matrix.os }}
-          command: deploy
-          AIO_RUNTIME_AUTH: ${{ secrets.AIO_RUNTIME_AUTH }}
-          AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
+#       - name: Deploy
+#         uses: adobe/aio-apps-action@0.0.1
+#         with:
+#           os: ${{ matrix.os }}
+#           command: deploy
+#           AIO_RUNTIME_AUTH: ${{ secrets.AIO_RUNTIME_AUTH }}
+#           AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
 
