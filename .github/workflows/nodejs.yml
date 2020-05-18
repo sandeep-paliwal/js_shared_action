@@ -25,7 +25,7 @@ jobs:
           command: build
           AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
       - name: Test
-        run: 
+        run: |
           npm install -g jest
           aio app test
 #       - name: Test
