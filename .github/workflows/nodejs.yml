@@ -24,10 +24,10 @@ jobs:
           os: ${{ matrix.os }}
           command: build
           AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
-#       - name: Test
-#         uses: adobe/aio-apps-action@0.0.1
-#         with:
-#           command: test
+      - name: Test
+        uses: adobe/aio-apps-action@0.0.1
+        with:
+          command: test
 #       - name: Deploy
 #         uses: adobe/aio-apps-action@0.0.1
 #         with:
