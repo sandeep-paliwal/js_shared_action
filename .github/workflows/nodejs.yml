@@ -28,10 +28,10 @@ jobs:
 #         run: |
 #           npm install -g jest
 #           aio app test
-      - name: Test
-        uses: adobe/aio-apps-action@fix-PR-issue
-        with:
-          command: test
+#       - name: Test
+#         uses: adobe/aio-apps-action@fix-PR-issue
+#         with:
+#           command: test
       - name: Deploy
         uses: adobe/aio-apps-action@fix-PR-issue
         with:
