@@ -14,16 +14,16 @@ jobs:
         uses: actions/checkout@v2
       - name: npm install
         run: npm i
-#       - name: Setup CLI
-#         uses: adobe/aio-cli-setup-action@1.0.0
-#         with:
-#           os: ${{ matrix.os }}
-#       - name: Build
-#         uses: sandeep-paliwal/aio-apps-action@1.0.1
-#         with:
-#           os: ${{ matrix.os }}
-#           command: build
-#           AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
+      - name: Setup CLI
+        uses: adobe/aio-cli-setup-action@1.0.0
+        with:
+          os: ${{ matrix.os }}
+      - name: Build
+        uses: sandeep-paliwal/aio-apps-action@1.0.1
+        with:
+          os: ${{ matrix.os }}
+          command: build
+          AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
 #       - name: Test
 #         run: |
 #           npm install -g jest
