@@ -19,24 +19,24 @@ jobs:
         with:
           os: ${{ matrix.os }}
       - name: Build
-        uses: adobe/aio-apps-action@1.0.0
+        uses: sandeep-paliwal/aio-apps-action
         with:
           os: ${{ matrix.os }}
           command: build
           AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
-      - name: Test
-        run: |
-          npm install -g jest
-          aio app test
 #       - name: Test
-#         uses: adobe/aio-apps-action@0.0.1
-#         with:
-#           command: test
-#       - name: Deploy
-#         uses: adobe/aio-apps-action@0.0.1
-#         with:
-#           os: ${{ matrix.os }}
-#           command: deploy
-#           AIO_RUNTIME_AUTH: ${{ secrets.AIO_RUNTIME_AUTH }}
-#           AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
+#         run: |
+#           npm install -g jest
+#           aio app test
+      - name: Test
+        uses: sandeep-paliwal/aio-apps-action
+        with:
+          command: test
+      - name: Deploy
+        uses: sandeep-paliwal/aio-apps-action@
+        with:
+          os: ${{ matrix.os }}
+          command: deploy
+          AIO_RUNTIME_AUTH: ${{ secrets.AIO_RUNTIME_AUTH }}
+          AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
 
