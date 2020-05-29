@@ -1,7 +1,6 @@
 name: App Deploy
 
 on: [release]
-  types: [released]
 jobs:
   deploy:
     name: Deploy to Prod
