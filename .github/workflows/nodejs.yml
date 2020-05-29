@@ -19,7 +19,7 @@ jobs:
         with:
           os: ${{ matrix.os }}
       - name: Build
-        uses: adobe/aio-apps-action@master
+        uses: adobe/aio-apps-action@1.0.0
         with:
           os: ${{ matrix.os }}
           command: build
@@ -29,11 +29,11 @@ jobs:
 #           npm install -g jest
 #           aio app test
       - name: Test
-        uses: adobe/aio-apps-action@master
+        uses: adobe/aio-apps-action@1.0.0
         with:
           command: test
       - name: Deploy
-        uses: adobe/aio-apps-action@master
+        uses: adobe/aio-apps-action@1.0.0
         with:
           os: ${{ matrix.os }}
           command: deploy
