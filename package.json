@@ -9,7 +9,7 @@
     "package": "ncc build aio_cli_actions/setup-cli/setup.js -o dist/setup-cli/;ncc build aio_cli_actions/build-app/build.js -o dist/build-app/;ncc build aio_cli_actions/deploy-app/deploy.js -o dist/deploy-app/"
   },
   "dependencies": {
-    "@actions/core": "^1.2.2",
+    "@actions/core": "^1.2.6",
     "@actions/github": "^2.1.0",
     "jest-junit": "^6.4.0",
     "openwhisk": "^3.20.0"
